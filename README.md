@@ -10,7 +10,7 @@ Example of sails(js) controller (EngineController.js):
                     if (err) {
                             return res.serverError(err);
                     }
-                    sails.sockets.join(req, 'all', function(err) { // To broadcast
+                    sails.sockets.join(req, 'all', function(err) { // To be able to broadcast
                             if (err) {
                                     return res.serverError(err);
                             }
