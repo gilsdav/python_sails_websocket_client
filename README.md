@@ -1,4 +1,4 @@
-# Python 3 sails(js) websocket client
+# Python 3 - sails(js) +0.11 websocket client
 This library try to make sails(js) websocket easy to use in Python 3. This library is made for socket.io v1.0.x .
 
 Example of sails(js) controller (EngineController.js):
