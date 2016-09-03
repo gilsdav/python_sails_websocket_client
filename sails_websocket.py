@@ -94,9 +94,10 @@ class SailsWebsocket:
         self.__can_send_ping = False
         self.__ws.close()
 
-    def send(self, method, domain, headers):
+    def send(self, method, domain, headers, message):
         json_header = json.dumps(headers)
-        self.__ws.send('42["' + method + '", {"url":"' + domain + '", "headers":' + json_header + '}]')
+        json_message = json.dumps(message)
+        self.__ws.send('42["' + method + '", {"url":"' + domain + '", "headers":' + json_header + ', "data":' + json_message + '}]')
 
     # Overridable by client
     

@@ -10,7 +10,7 @@ connection_state = 0
 
 def on_connect(ws):
     print('bitch please')
-    ws.send('post', '/engine/connection/335', {"token":"token"})
+    ws.send('post', '/engine/connection/335', {"token":"token"}, {"datatopost": "data"})
 
 def on_error(ws, error):
     print('fuuuuuuuuu')
