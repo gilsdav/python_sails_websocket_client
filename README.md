@@ -5,6 +5,7 @@ Example of sails(js) controller (EngineController.js):
 
 	connection: function(req, res) {
 		var name = req.param('id');
+		var data = req.param('datatopost');
         if (req.isSocket && req.method === 'POST') {
             sails.sockets.join(req, name, function(err){ // To be able to call by id
                     if (err) {
